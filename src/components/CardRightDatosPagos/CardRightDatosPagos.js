@@ -1,7 +1,10 @@
 "use client"
+import { useRouter } from 'next/router'
 import style from './cardRightDatosPagos.module.css'
 
 function CardRightDatosPagos() {
+  const router = useRouter();
+
   return (
     <div className={style.container}>
         <h4 className={style.title}>Datos del Pago</h4>
@@ -15,6 +18,16 @@ function CardRightDatosPagos() {
             <p className={style.data}>0973</p>
             <div className={style.horizontal}>
                 <div>
+                  <p className={style.descripcion}>N° de Meses que Pago</p>
+                  <p className={style.data}>4</p> 
+                </div>  
+                <div>
+                  <p className={style.descripcion}>N° de Meses a Deber</p>
+                  <p className={style.data} style={{textAlign: 'right'}}>9</p> 
+                </div>           
+            </div>
+            <div className={style.horizontal}>
+                <div>
                   <p className={style.descripcion}>Tipo de Plan</p>
                   <p className={style.data}>Basico</p> 
                 </div>  
@@ -22,17 +35,7 @@ function CardRightDatosPagos() {
                   <p className={style.descripcion}>Formato de Pago</p>
                   <p className={style.data}>Transferencia</p> 
                 </div>           
-            </div>
-            <div className={style.horizontal}>
-                <div>
-                  <p className={style.descripcion}>N° de Meses que Pago</p>
-                  <p className={style.data}>4</p> 
-                </div>  
-                <div>
-                  <p className={style.descripcion}>N° de Meses a Deber</p>
-                  <p className={style.data}>9</p> 
-                </div>           
-            </div>
+            </div>           
         </div>
         <div className={style.contentCenter}>
           <p className={style.titleCenter}>Monto y Pago</p>
@@ -66,8 +69,10 @@ function CardRightDatosPagos() {
             </div>
         </div>
         <div className={style.contentBottom}>
-            <button type='button' className={style.confirmBtn}>Confirmar</button>
-            <p className={style.cancelarBtn}>Cancelar</p>
+            <button type='button' onClick={() => router.push('/clientes/confirmacion')} className={style.confirmBtn}>
+              Confirmar
+            </button>
+            <p className={style.cancelarBtn} onClick={() => router.push('/clientes/pagos')}>Cancelar</p>
         </div>
     </div>
   )

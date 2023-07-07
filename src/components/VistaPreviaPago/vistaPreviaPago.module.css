@@ -1,0 +1,160 @@
+.container {
+    width: 574px;
+    height: 505px;
+    border-radius: 20px;
+    padding: 8px;
+    background-color: #fff;
+}
+
+.successMessage {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background: #CAFFE2;
+    height: 67px;
+    margin-bottom: 7px;
+}
+
+
+.circleContent {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 1rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blueMessage {
+    color: #2B308B;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.grayMessage {
+    color: #757D8A;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.titleInfo {
+    font-size: 16px;
+    font-weight: 500;
+    color: #404D61;
+}
+
+.codigoSeguro {
+    color: #2B308B;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 3px;
+}
+
+.content_codigoSeguro {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem
+}
+
+/*detalles Cliente*/
+.detallesCliente {
+    margin: 0 1rem
+}
+
+.title_detallesCliente {
+    color: #2B308B;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.dataCliente, .dataPoliza {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    
+   
+}
+
+.title_field {
+    color: #404D61;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.data_field {
+    color: #2B308B;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.right {
+    text-align: right;
+}
+
+.detallesPoliza{
+    margin: 0 1rem;
+    margin-top: 12px;
+}
+
+/*Lista Beneficiarios*/
+
+.contentBeneficiarios {
+    margin: 0 1rem;
+    margin-top: 8px;
+}
+
+.listaBeneficiarios{
+   /* background-color: red; */
+   height: 70px;
+   padding-right: 4px;
+   overflow: auto;
+}
+
+.listaBeneficiarios::-webkit-scrollbar-thumb {
+    background: #2B308B;
+    border-radius: 5px;
+}
+
+.listaBeneficiarios::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: #aaa; 
+    border-radius: 5px;
+}
+
+.row {
+    border-radius: 20px;
+    border: 1px solid #DADADA;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.row_content{
+    display: flex;
+    flex-direction: column;
+}
+
+.row_content > p:nth-child(1) {
+    color: #404D61;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.row_content > p:nth-child(2) {
+    color: #2B308B;
+    font-size: 12px;
+    font-weight: 500;
+}
