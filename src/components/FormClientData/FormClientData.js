@@ -92,7 +92,7 @@ export const FormClientData = () => {
                         </div>
                     </div>
                     <div className={style.buttons}>
-                        <button type="button" className="btn-primary" onClick={() => reset()}>
+                        <button type="button" className="btn-primary" onClick={() => {reset(); router.push('/clientes/lista')}}>
                             Cancelar
                         </button>
                         <button type="submit" className="btn-primary">

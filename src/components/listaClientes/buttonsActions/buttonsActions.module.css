@@ -1,0 +1,21 @@
+.contentButtons{
+    display: flex;
+    align-items: center;
+}
+
+.contentButtons > button {
+    border-radius: 25px;
+    background: #2B308B;
+    padding: 12px 20px;
+    color: #fff;
+    width: 140px;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contentButtons > button:nth-child(1) {
+    color: #000;
+    background: #CEDEFF;
+}

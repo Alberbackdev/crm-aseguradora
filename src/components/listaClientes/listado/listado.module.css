@@ -1,0 +1,68 @@
+.listado {
+    height: 380px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 8px;
+    margin-right: 41px;
+    margin-top: 4rem;
+}
+
+.card {
+    border-radius: 20px;
+    background: #FFF;
+    padding: 15px;
+    width: 226px;
+    height: 150px;
+}
+
+.cardTop, .cardBottom, .icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icons {
+    cursor: pointer;
+}
+
+.cardTop > P {
+    background: #E9FFEB;
+    padding: 8px 11px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.dataUser {
+    margin: 5px 0;
+}
+.dataUser > p:nth-child(1) {
+    font-weight: 500;
+}
+
+.dataUser > p:nth-child(2) {
+    font-size: 13px;
+    color: #9AABB4;
+    margin-top: -5px;
+}
+
+.calendarIcon {
+    background-color: #eee;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
+.dateCard > p:nth-child(1) {
+    font-weight: 500;
+    color: #A7A7A7;
+}
+
+.dateCard > p:nth-child(2) {
+    font-size: 12px;
+    font-weight: 600;
+}
