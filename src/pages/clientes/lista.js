@@ -9,7 +9,7 @@ export default function lista() {
 
     return (
         <Layout>
-            <div style={{ marginLeft: '41px', marginTop: '3rem' }}>
+            <div style={{marginLeft: '41px', marginTop: '3rem'}}>
                 <ButtonsActions />
                 <Listado />
             </div>

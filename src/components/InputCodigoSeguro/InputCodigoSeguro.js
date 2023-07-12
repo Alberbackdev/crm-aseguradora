@@ -6,9 +6,9 @@ import style from './InputCodigoSeguro.module.css'
 import { createPolizeAction } from '../../services/polizaServices';
 //This is form for new client
 
-export const InputCodigoSeguro = () => {
+export const InputCodigoSeguro = ({data}) => {
     const router = useRouter()
-    
+    console.log(data)
     //llama a la funcion para actualizar el estado del input
     const { values, handleInputChange, reset } = useForm({ codigoPoliza: "" })
     //actua como actualizador y reseteo de forms
@@ -24,7 +24,7 @@ export const InputCodigoSeguro = () => {
                         <input
                             name="codigoPoliza"
                             type="text"
-                            placeholder="O-0001"
+                            placeholder={data.codigoPoliza}
                             className="rounded-3xl  border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2  focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                             value={values.codigoPoliza}
                             onChange={handleInputChange}

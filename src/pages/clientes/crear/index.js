@@ -5,23 +5,24 @@ import Layout from "../../../components/LayoutFolder/Layout";
 
 //This is form for new client
 
-export default function crear() {
-
+export default function crear({idPolize}) {
+    console.log(idPolize)
     return (
         <Layout>
-            <InputCodigoSeguro />
-            <FormClientData />
+            <InputCodigoSeguro data={idPolize}/>
+            <FormClientData data={idPolize} />
         </Layout>
     )
 }
 
-/* export const getServerSideProps = async (ctx) => {
+export const getServerSideProps = async (ctx) => {
     const res = await fetch('http://localhost:3000/api/clientes/polize')
     const dataPolize = await res.json()
+    const idPolize = dataPolize.pop()
 
     return {
         props: {
             idPolize
         }
     }
-} */
+}

@@ -16,22 +16,133 @@
 
 .contentTop {
     width: 313px;
-    height: 181px; 
+    height: 200px; 
     border-radius: 20px;
     padding: 8px;
     border: 2px solid #DADADA;
+}
+
+.descripcion, .mes {
+    color: #404D61;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 3px 0;
+}
+
+.data{
+    color: #2B308B;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.horizontal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .contentCenter {
     width: 313px;
-    height: 181px; 
+    height: 170px; 
     border-radius: 20px;
     padding: 8px;
-    border: 2px solid #DADADA;
-    margin: 1.5rem 0;
+}
+
+.titleCenter {
+    color: #2B308B;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.mesesPagados {
+    height: 70px;
+    overflow-y: auto;
+    padding-right: 5px;
+    margin: 4px 0;
+}
+
+.mesPagado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mesesPagados::-webkit-scrollbar-thumb {
+    background: #2B308B;
+    border-radius: 5px;
+}
+
+.mesesPagados::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: #aaa; 
+    border-radius: 5px;
+}
+
+.mes {
+    margin: 0;
+}
+
+.monto {
+    color: #2B308B;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.mesPagado_center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.montoEnMoneda {
+    margin-top: 10px;
+}
+
+.monedaBs {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.monedaBs {
+    font-weight: 600;
+    color: #289056;
+    font-size: 16px;
+}
+
+
+.monedaDolar {
+    color: #757D8A;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .contentBottom {
-
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.confirmBtn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background: #289056;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 20px;
+    width: 170px;
+    text-align: center;
+    margin: 8px 0;
+}
+
+.cancelarBtn{
+    color: #757D8A;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+}

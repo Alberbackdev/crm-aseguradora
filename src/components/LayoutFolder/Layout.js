@@ -1,38 +1,22 @@
 // plantilla dentro del cuadro blanco
-import { useSession, signIn} from "next-auth/react"
+import { useSession, signIn } from "next-auth/react"
 import Nav from "../Sidebar/Sidebar"
 import style from './layout.module.css'
 import Header from "../Header/Header"
+import Link from 'react'
 
 //children es el nombre de la pagina que esta accediedo
-export default function Layout({children}) {
+export default function Layout({ children }) {
   const { data: session, status } = useSession()
-  if(status==='loading') {
+  if (status === 'loading') {
     return <h1>Loading...</h1>;
   }
-  if (!session) {
-    return (
-      <div className="bg-blue-900 w-screen h-screen m-auto flex items-center">
-        <div className="bg-white text-center">
-          <p> Not signed in</p> <br />
-          <button onClick={() => signIn()}>Sign in</button>
-
-        </div>
-      </div>
-    )
-    
+  if (session) {
+    return <p>Signed in as {session.user.email}</p>
   }
-  //if a user is logged, show control panel admin
-  //children is name of page
-  return (
-    <div className={style.container}>      
-      <div className={style.contentPlantilla}> {/* Sidebar */} 
-        <Nav />
-      </div>
-      <div className={style.children}> {/* Header y Children */}
-        <Header />
-        {children}
-      </div>
-    </div>
-  )
+
+  return <Link href="/api/auth/signin" />
+//if a user is logged, show control panel admin
+//children is name of page
+
 }

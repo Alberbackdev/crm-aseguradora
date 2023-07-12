@@ -6,7 +6,7 @@ import { createClientAction } from "../../services/clienteServices";
 import style from './formClientData.module.css'
 //This is form for new client
 
-export const FormClientData = () => {
+export const FormClientData = ({data}) => {
     const router = useRouter()
     
     //llama a la funcion para actualizar el estado del input
@@ -88,10 +88,10 @@ export const FormClientData = () => {
                     </div>
                 </div>
                 <div className={style.buttons}>
-                    <button type="button" className="btn-primary" onClick={() => reset()}>
+                    <button type="button" className="btn-primary" onClick={() => {reset(); router.push('/clientes/lista')}}>
                         Cancelar
                     </button>
-                    <button type="submit" className="btn-primary" onClick={() => router.push('/clientes/poliza')}>
+                    <button type="submit" className="btn-primary" onClick={() => {router.push('/clientes/poliza') }}>
                         Siguiente
                     </button>
                 </div>
