@@ -1,0 +1,22 @@
+.container {
+    width: 370px;
+    height: 115px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-left: 41px;
+}
+
+.title {
+    color: #2B308B;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.container > input {
+    width: 313px;
+    height: 44px;
+    text-align: center;
+    border: 1px solid #404D61;
+}
+.container > input::placeholder {color: #000;}
